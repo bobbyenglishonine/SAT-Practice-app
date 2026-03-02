@@ -37,12 +37,12 @@
   <h2 class="text-3xl font-extrabold mb-6 text-indigo-800">Choose Section</h2>
   <div class="grid md:grid-cols-2 gap-8">
     <button data-section="RW" class="startBtn p-8 border-2 rounded-xl bg-indigo-100 text-indigo-800 hover:bg-indigo-200 transition duration-300 shadow-lg font-semibold text-lg">
-      Reading & Writing (33 Questions)
-      <p class="text-sm text-indigo-600 mt-1">33:00 Time Limit</p>
+      <span class="rw-label"></span>
+      <p class="text-sm text-indigo-600 mt-1"><span class="rw-time"></span> Time Limit</p>
     </button>
     <button data-section="MATH" class="startBtn p-8 border-2 rounded-xl bg-green-100 text-green-800 hover:bg-green-200 transition duration-300 shadow-lg font-semibold text-lg">
-      Math (UNDER DEVELOPMENT)
-      <p class="text-sm text-green-600 mt-1">33:00 Time Limit</p>
+      <span class="math-label"></span>
+      <p class="text-sm text-green-600 mt-1"><span class="math-time"></span> Time Limit</p>
     </button>
   </div>
 </section>
@@ -97,7 +97,6 @@
 /* ---------------- DATA: Questions ---------------- */
 const DATA = {
   RW: {
-    time: 33 * 60,
     modules: [
       [
         {
@@ -538,7 +537,6 @@ explain: "Choice C directly introduces the 1983 collection by name, date, publis
   },
 
   MATH: {
-    time: 15 * 60,
     modules: [
       [
         {
@@ -724,6 +722,131 @@ D: "86"
 },
 correct: "D",
 explain: "The two parts add to 106, so x + y = 106, and x is 6 more than 4 times y, so x = 4y + 6. Substituting gives 4y + 6 + y = 106, so 5y = 100 and y = 20. Then x = 4(20) + 6 = 86, which corresponds to choice D."
+},
+{
+id: "17",
+img: "",
+q: "f(x) = (x + 6)(x + 5)(x − 4)\n\nThe function f is given. Which table of values represents y = f(x) − 3 ?",
+options: {
+A: "x: −6, −5, 4 | y: −9, −8, 1",
+B: "x: −6, −5, 4 | y: −3, −3, −3",
+C: "x: −6, −5, 4 | y: −3, −2, 7",
+D: "x: −6, −5, 4 | y: 3, 3, 3"
+},
+correct: "B",
+explain: "The zeros of f(x) are x = −6, −5, and 4, so f(−6) = f(−5) = f(4) = 0. Subtracting 3 gives y = 0 − 3 = −3 for all three x-values, which matches option B."
+},
+{
+id: "18",
+img: "",
+q: "A landscaper uses a hose that puts 88x ounces of water in a bucket in 5y minutes. Which expression represents the number of ounces of water the hose puts in the bucket in 9y minutes at this rate?",
+options: {
+A: "9x / 440",
+B: "440x / 9",
+C: "5x / 792",
+D: "792x / 5"
+},
+correct: "D",
+explain: "The rate is 88x ÷ 5y ounces per minute. In 9y minutes: (88x / 5y) × 9y = 792x / 5. The y cancels, leaving 792x / 5."
+},
+{
+id: "19",
+img: "",
+q: "4x − 9y = 9y + 5\nhy = 2 + 4x\n\nIn the given system of equations, h is a constant. If the system has no solution, what is the value of h ?",
+options: {
+A: "−9",
+B: "0",
+C: "9",
+D: "18"
+},
+correct: "D",
+explain: "Rearrange the first equation: 4x − 18y = 5. Rearrange the second: 4x − hy = 2. For no solution, the lines must be parallel — same coefficients for x and y but different constants. So h = 18."
+},
+{
+id: "20",
+img: "",
+q: "13 is p% of 25. What is the value of p ?",
+correct: "52",
+explain: "p% of 25 = 13 means (p/100) × 25 = 13, so p = (13 × 100) / 25 = 52."
+},
+{
+id: "21",
+img: "",
+q: "\(\sqrt{(x-2)^2} = \sqrt{3x+34}\)\n\nWhat is the smallest solution to the given equation?",
+correct: "-3",
+explain: "√((x−2)²) = |x−2|, so |x−2| = √(3x+34). Squaring both sides: (x−2)² = 3x+34 → x²−4x+4 = 3x+34 → x²−7x−30 = 0 → (x−10)(x+3) = 0, giving x = 10 or x = −3. Both check out, so the smallest solution is −3."
+},
+{
+id: "22",
+img: "",
+q: "Function f is defined by f(x) = (x + 6)(x + 5)(x + 1). Function g is defined by g(x) = f(x − 1). The graph of y = g(x) in the xy-plane has x-intercepts at (a, 0), (b, 0), and (c, 0), where a, b, and c are distinct constants. What is the value of a + b + c ?",
+options: {
+A: "−15",
+B: "−9",
+C: "11",
+D: "15"
+},
+correct: "B",
+explain: "g(x) = f(x−1) shifts the zeros of f one unit to the right. The zeros of f are −6, −5, −1, so the zeros of g are −5, −4, 0. Then a + b + c = −5 + −4 + 0 = −9."
+},
+{
+id: "23",
+img: "",
+q: "For x > 0, the function f is defined as follows:\n\nf(x) equals 201% of x\n\nWhich of the following could describe this function?",
+options: {
+A: "Decreasing exponential",
+B: "Decreasing linear",
+C: "Increasing exponential",
+D: "Increasing linear"
+},
+correct: "D",
+explain: "f(x) = 2.01x is a linear function with a positive slope, so it is increasing linear. It is not exponential because x is the input multiplied by a constant, not an exponent."
+},
+{
+id: "24",
+img: "",
+q: "f(x) = 4x² + 64x + 262\n\nThe function g is defined by g(x) = f(x + 5). For what value of x does g(x) reach its minimum?",
+options: {
+A: "−13",
+B: "−8",
+C: "−5",
+D: "−3"
+},
+correct: "A",
+explain: "f(x) reaches its minimum at x = −64/(2·4) = −8. Since g(x) = f(x+5), the minimum of g occurs when x+5 = −8, so x = −13."
+},
+{
+id: "25",
+img: "",
+q: "One gallon of stain will cover 170 square feet of a surface. A yard has a total fence area of w square feet. Which equation represents the total amount of stain S, in gallons, needed to stain the fence in this yard twice?",
+options: {
+A: "S = w / 170",
+B: "S = 170w",
+C: "S = 340w",
+D: "S = w / 85"
+},
+correct: "D",
+explain: "One coat needs w/170 gallons. Two coats need 2w/170 = w/85 gallons, which matches option D."
+},
+{
+id: "26",
+img: "qm26.jpg",
+q: "Poll Results\nAngel Cruz | 483\nTerry Smith | 320\n\nThe table shows the results of a poll. A total of 803 voters selected at random were asked which candidate they would vote for in the upcoming election. According to the poll, if 6,424 people vote in the election, by how many votes would Angel Cruz be expected to win?",
+options: {
+A: "163",
+B: "1,304",
+C: "3,864",
+D: "5,621"
+},
+correct: "B",
+explain: "Angel Cruz gets 483/803 of votes and Terry Smith gets 320/803. Scaled to 6,424 voters: Cruz ≈ 3,864 and Smith ≈ 2,560. The margin is 3,864 − 2,560 = 1,304."
+},
+{
+id: "27",
+img: "",
+q: "Right rectangular prism X is similar to right rectangular prism Y. The surface area of right rectangular prism X is 58 square centimeters (cm²), and the surface area of right rectangular prism Y is 1,450 cm². The volume of right rectangular prism Y is 1,250 cubic centimeters (cm³). What is the sum of the volumes, in cm³, of right rectangular prism X and right rectangular prism Y?",
+correct: "1260",
+explain: "The ratio of surface areas is 58/1450 = 1/25, so the linear scale factor is 1/5 and the volume scale factor is (1/5)³ = 1/125. Volume of X = 1250/125 = 10 cm³. Sum = 10 + 1250 = 1260 cm³."
 }
 
 
@@ -760,7 +883,38 @@ pauseBtn.onclick = togglePause;
 if (exitBtn) exitBtn.onclick = exitToMain;
 if (exitBtnResult) exitBtnResult.onclick = exitToMain;
 
+
+function initMenu() {
+  const sections = {
+    RW:   { labelSel: '.rw-label',   timeSel: '.rw-time',   name: 'Reading & Writing' },
+    MATH: { labelSel: '.math-label', timeSel: '.math-time', name: 'Math' }
+  };
+
+  Object.entries(sections).forEach(([key, cfg]) => {
+    const totalQ   = DATA[key].modules.reduce((sum, m) => sum + m.length, 0);
+    const totalSec = calcTime(key);
+    const mins     = Math.floor(totalSec / 60);
+    const secs     = String(totalSec % 60).padStart(2, '0');
+
+    document.querySelector(cfg.labelSel).textContent =
+      `${cfg.name} (${totalQ} Question${totalQ !== 1 ? 's' : ''})`;
+    document.querySelector(cfg.timeSel).textContent =
+      `${mins}:${secs}`;
+  });
+}
+
+initMenu();
+
 /* ---------------- APP LOGIC ---------------- */
+
+/*--TIMER--*/
+
+function calcTime(sec) {
+  const totalQ = DATA[sec].modules.reduce((sum, m) => sum + m.length, 0);
+  return totalQ * 60; // 1 minute per question
+}
+
+
 function start(sec){
   stopTimer();
 
@@ -770,7 +924,7 @@ function start(sec){
   pauseBtn.classList.add('bg-yellow-400');
   pauseBtn.classList.remove('bg-green-400');
 
-  timeLeft = DATA[section].time;
+  timeLeft = calcTime(section);
   show('q');
   startTimer();
   render();
